@@ -49,6 +49,8 @@
     color: yellow;
     margin-bottom: 16px;
     box-shadow: 4px 4px yellow;
+    border: 'none';
+    border-radius: unset;
   }
 </style>
 
