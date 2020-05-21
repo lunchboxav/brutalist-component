@@ -1,5 +1,5 @@
 <script>
-  import VTitle from "./components/Vtitle.svelte";
+  import VTitle from "./components/VTitle.svelte";
   import VMenu from "./components/VMenu.svelte";
   import Card from "./components/Card.svelte";
   import SmallCard from "./components/SmallCard.svelte";
