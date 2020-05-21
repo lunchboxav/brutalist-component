@@ -5,12 +5,12 @@
     font-family: "Helmet";
   }
 
-  .cardContainer img {
+  img {
     width: 100%;
     border-bottom: 4px solid black;
   }
 
-  .cardContainer h3 {
+  h3 {
     font-size: 3rem;
     margin: 0;
     text-align: right;
@@ -24,7 +24,7 @@
     border-left: none;
   }
 
-  .cardContainer h4 {
+  h4 {
     font-size: 1.25rem;
     color: yellow;
     background: black;
@@ -37,19 +37,19 @@
     border-left: none;
   }
 
-  .cardContainer p {
+  p {
     padding: 16px;
     text-align: left;
     font-size: 1.125rem;
   }
 
-  .cardContainer button {
+  button {
     padding: 16px;
     background-color: black;
     color: yellow;
     margin-bottom: 16px;
     box-shadow: 4px 4px yellow;
-    border: 'none';
+    border: "none";
     border-radius: unset;
   }
 </style>

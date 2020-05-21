@@ -1,6 +1,8 @@
 <script>
   import Button from "./components/Button.svelte";
   import Card from "./components/Card.svelte";
+  import Form from "./components/Form.svelte";
+  import SmallCard from "./components/SmallCard.svelte";
   export let name;
   let imgSrc = "assets/grafana.png";
 </script>
@@ -9,14 +11,13 @@
   main {
     text-align: center;
     padding: 1em;
-    max-width: 240px;
     margin: 0 auto;
   }
 
   #contentContainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   h1 {
@@ -24,10 +25,6 @@
     text-transform: uppercase;
     font-size: 5em;
     font-weight: 100;
-  }
-
-  img {
-    width: 240px;
   }
 
   @media (min-width: 640px) {
@@ -41,5 +38,7 @@
   <h1>Selamat Datang di {name}!</h1>
   <div id="contentContainer">
     <Card />
+    <SmallCard />
+    <Form />
   </div>
 </main>
