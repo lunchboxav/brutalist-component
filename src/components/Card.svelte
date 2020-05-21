@@ -43,13 +43,17 @@
     font-size: 1.125rem;
   }
 
+  #bottomSection {
+    display: flex
+  }
+  
   button {
     padding: 16px;
     background-color: black;
     color: yellow;
-    margin-bottom: 16px;
+    margin: 0 auto 16px auto;
     box-shadow: 4px 4px yellow;
-    border: "none";
+    border: none;
     border-radius: unset;
   }
 </style>
@@ -62,5 +66,8 @@
     Siapa yang tak kenal makanan instan klasik lintas generasi ini?
     Membayangkannya saja, rasanya lidah bergoyang. Sehat? Debatable. Lezat? Ya.
   </p>
+  <div id="bottomSection">
   <button>Pesan Sekarang</button>
+  </div>
+  
 </div>

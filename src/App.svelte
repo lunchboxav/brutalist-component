@@ -1,43 +1,42 @@
 <script>
-  import VTitle from "./components/VTitle.svelte";
+  import router from "page";
+  import Home from "./routes/Home.svelte";
+  import Card from "./routes/Card.svelte";
   import VMenu from "./components/VMenu.svelte";
-  import Card from "./components/Card.svelte";
-  import SmallCard from "./components/SmallCard.svelte";
-  import MiniCard from "./components/MiniCard.svelte";
+
+  let page;
+  let params;
+  let props;
+
   export let name, desc;
+
+  router("/", () => {
+    page = Home;
+    props = {
+      name: name,
+      desc: desc
+    }
+  })
+
+  router("/card", () => {
+    page = Card;
+    props = {
+      name: name,
+      desc: desc
+    }
+  })
+  router.start();
 </script>
 
-<style>
-  main {
-    text-align: center;
-    margin: 0 auto;
-  }
+<VMenu>
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/card">Card</a></li>
+</ul>
+</VMenu>
 
-  #contentContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 800px;
-    margin: auto;
-    padding: 16px;
-  }
 
-  #blockContainer {
-    display: flex;
-    height: 284px;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-</style>
 
 <main>
-  <VTitle>{name} - {desc}</VTitle>
-  <VMenu />
-  <div id="contentContainer">
-    <Card />
-    <div id="blockContainer">
-      <SmallCard />
-      <MiniCard />
-    </div>
-  </div>
+  <svelte:component this={page} {...props}/>
 </main>
