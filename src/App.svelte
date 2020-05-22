@@ -1,7 +1,7 @@
 <script>
   import router from "page";
-  import Home from "./routes/Home.svelte";
-  import Card from "./routes/Card.svelte";
+  import home from "./routes/home.svelte";
+  import card from "./routes/card.svelte";
   import VTitle from "./components/VTitle.svelte";
   import VMenu from "./components/VMenu.svelte";
 
@@ -11,8 +11,8 @@
 
   export let name, desc;
 
-  router("/", () => (page = Home));
-  router("/card", () => (page = Card));
+  router("/", () => (page = home));
+  router("/card", () => (page = card));
   router.start();
 </script>
 
@@ -27,9 +27,10 @@
   }
 
   #content {
-    margin: 0 auto;
-    padding: 0 32px;
+    padding: 16px 64px 32px 64px;
+    width: 960px;
   }
+
 </style>
 
 <div class="mainContainer">

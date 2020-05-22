@@ -70,3 +70,11 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+h2, h3, h4, h5 {
+	margin-bottom: 8px;
+}
+
+p {
+	margin-top: 0px;
+}

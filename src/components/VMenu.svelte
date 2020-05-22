@@ -10,6 +10,8 @@
 <style>
   .menuContainer {
     font-family: "Helmet";
+    position: sticky;
+    top: 40px;
   }
   ul {
     list-style: none;
@@ -30,12 +32,6 @@
 </style>
 
 <div class="menuContainer">
-  <!-- <ul>
-    <li>Home <em>(coming soon)</em> </li>
-    <li class="active">Card</li>
-    <li>Hero Image <em>(coming soon)</em></li>
-    <li>Form <em>(coming soon)</em></li> 
-  </ul>-->
   <ul>
     <li>
       <a
