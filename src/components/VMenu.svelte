@@ -20,7 +20,7 @@
     font-size: 1.125rem;
     padding: 8px 16px 8px 8px;
     display: block;
-    margin-left: 16px;
+    margin-left: 40px;
   }
 
   .active {
