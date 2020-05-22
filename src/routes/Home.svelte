@@ -5,15 +5,10 @@
 </script>
 
 <style>
-  main {
-    text-align: center;
-    margin: 0 auto;
-  }
+
 </style>
 
 <main>
-  <VTitle>{name} - {desc}</VTitle>
-  <VMenu />
   <h2>Home</h2>
   <p>
     Can we inject some personality in the sea of abundant digital product? This

@@ -2,6 +2,7 @@
   import router from "page";
   import Home from "./routes/Home.svelte";
   import Card from "./routes/Card.svelte";
+  import VTitle from "./components/VTitle.svelte";
   import VMenu from "./components/VMenu.svelte";
 
   let page;
@@ -10,33 +11,35 @@
 
   export let name, desc;
 
-  router("/", () => {
-    page = Home;
-    props = {
-      name: name,
-      desc: desc
-    }
-  })
-
-  router("/card", () => {
-    page = Card;
-    props = {
-      name: name,
-      desc: desc
-    }
-  })
+  router("/", () => (page = Home));
+  router("/card", () => (page = Card));
   router.start();
 </script>
 
-<VMenu>
-<ul>
-  <li><a href="/">Home</a></li>
-  <li><a href="/card">Card</a></li>
-</ul>
-</VMenu>
+<style>
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+  }
 
+  #menu {
+    /* margin-left: 80px; */
+  }
 
+  #content {
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+</style>
 
-<main>
-  <svelte:component this={page} {...props}/>
-</main>
+<div class="mainContainer">
+  <VTitle>{name} - {desc}</VTitle>
+
+  <div id="menu">
+    <VMenu />
+  </div>
+
+  <div id="content">
+    <svelte:component this={page} {...props} />
+  </div>
+</div>

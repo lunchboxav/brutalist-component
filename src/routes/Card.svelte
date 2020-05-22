@@ -26,8 +26,8 @@
 </style>
 
 <div>
-  <VTitle>{name} - {desc}</VTitle>
-  <VMenu />
+  <!-- <VTitle>{name} - {desc}</VTitle>
+  <VMenu /> -->
   <h2>Card</h2>
   <div id="contentContainer">
     

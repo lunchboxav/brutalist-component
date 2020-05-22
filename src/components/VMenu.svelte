@@ -1,17 +1,28 @@
+<script>
+  export let active = false;
+  function toggleActiveLink(event) {
+    active = !active;
+  }
+  let current = "home";
+  // console.log(current);
+</script>
+
 <style>
   .menuContainer {
-    text-align: left;
-    position: absolute;
-    left: 72px;
     font-family: "Helmet";
   }
   ul {
     list-style: none;
   }
   li {
-    font-size: 1.125rem;
-    padding: 8px;
+    margin: 8px 0;
   }
+
+  a {
+    font-size: 1.125rem;
+    padding: 8px 16px;
+  }
+
   .active {
     background: black;
     color: yellow;
@@ -25,5 +36,23 @@
     <li>Hero Image <em>(coming soon)</em></li>
     <li>Form <em>(coming soon)</em></li> 
   </ul>-->
-  <slot></slot>
+  <ul>
+    <li>
+      <a
+        href="/"
+        class:active={current === 'home'}
+        on:click={() => (current = 'home')}>
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        href="/card"
+        class:active={current === 'card'}
+        on:click={() => (current = 'card')}>
+        Card
+      </a>
+    </li>
+  </ul>
+  <slot />
 </div>
