@@ -1,7 +1,6 @@
 <script>
   import VTitle from "../components/VTitle.svelte";
   import VMenu from "../components/VMenu.svelte";
-  export let name, desc;
 </script>
 
 <style>
