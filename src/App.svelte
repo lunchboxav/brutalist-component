@@ -1,7 +1,7 @@
 <script>
   import router from "page";
-  import home from "./routes/home.svelte";
-  import card from "./routes/card.svelte";
+  import home from "./routes/home-page.svelte";
+  import card from "./routes/card-page.svelte";
   import VTitle from "./components/VTitle.svelte";
   import VMenu from "./components/VMenu.svelte";
 
