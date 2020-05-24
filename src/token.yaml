@@ -9,25 +9,25 @@ color:
 
 font:
   size:
-    default: 1rem
-    xs: 0.75rem,
-    sm: 0.875rem,
-    md: 1rem,
-    lg: 1.125rem,
-    xl: 1.25rem,
-    2xl: 1.5rem,
-    3xl: 1.875rem,
-    4xl: 2.25rem,
-    5xl: 3rem,
-    6xl: 4rem,
+    default: &default-font-size "1rem"
+    xs: &xsmall-font-size "0.75rem",
+    sm: &small-font-size "0.875rem",
+    md: &medium-font-size "1rem",
+    lg: &large-font-size "1.125rem",
+    xl: &xlarge-font-size "1.25rem",
+    2xl: &2xlarge-font-size "1.5rem",
+    3xl: &3xlarge-font-size "1.875rem",
+    4xl: &4xlarge-font-size "2.25rem",
+    5xl: &5xlarge-font-size "3rem",
+    6xl: &6xlarge-font-size "4rem",
 
 space:
-  default: 16px
-  s: 8px
-  m: 16px
-  l: 24px
-  xl: 32px
-  xxl: 64px
+  default: &default-space "16px"
+  s: &small-space "8px"
+  m: &medium-space "16px"
+  l: &large-space "24px"
+  xl: &xlarge-space "32px"
+  2xl: &2xlarge-space "64px"
 
 # Decisions
 
@@ -36,3 +36,13 @@ background-color:
 
 text-color:
   default: *color-black
+
+text-size:
+  default: *default-font-size
+  label: *xsmall-font-size
+  small: *small-font-size
+  body: *medium-font-size
+  subtitle: *2xlarge-font-size
+  heading: *4xlarge-font-size
+  
+
