@@ -1,0 +1,25 @@
+@import './vars.scss';
+@import './test.scss';
+
+@mixin bodyXl() {
+  font-size: $xlarge-medium-font-size;
+  font-weight: $xlarge-medium-font-weight;
+  line-height: $xlarge-medium-line-height;
+}
+
+@mixin bodyL() {
+  font-size: $large-medium-font-size;
+  font-weight: $large-medium-font-weight;
+  line-height: $large-medium-line-height;
+}
+
+@mixin bodyM() {
+  font-size: $medium-medium-font-size;
+  font-weight: $medium-medium-font-weight;
+  line-height: $medium-medium-line-height;
+}
+
+// This is how to use token(s) mapped in test.scss.
+@mixin color() {
+  color: esds-token('text-color', 'brand');
+}

@@ -12,32 +12,29 @@
   //   "5xl": "3rem",
   //   "6xl": "4rem",
   // }
-  // let bodyXl = true;
-  // let className = "boo";
+
   export let bodyM = false;
   export let bodyL = false;
   export let bodyXl = false;
 </script>
 
 <style type="text/scss">
-  @import '../styles/vars';
+  @import '../styles/styles';
 
   .bodyXl {
-    font-size: $xlarge-medium-font-size;
-    font-weight: $xlarge-medium-font-weight;
-    line-height: $xlarge-medium-line-height;
+    @include bodyXl();
   }
 
   .bodyL {
-    font-size: $large-medium-font-size;
-    font-weight: $large-medium-font-weight;
-    line-height: $large-medium-line-height;
+    @include bodyL();
   }
 
   .bodyM {
-    font-size: $medium-medium-font-size;
-    font-weight: $medium-medium-font-weight;
-    line-height: $medium-medium-line-height;
+    @include bodyM();
+  }
+
+  .active {
+    @include color();
   }
 </style>
 
@@ -46,6 +43,7 @@
 </p> -->
 
 <p class:bodyM class:bodyL class:bodyXl>
+  <span class="active">test</span>
   <slot></slot>
 </p>
 

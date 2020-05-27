@@ -1,0 +1,64 @@
+$esds-color-white: #FFFFFF !default;
+$esds-color-black: #000000 !default;
+$esds-color-orange-82: #D24B00 !default;
+$esds-color-orange-91: #E85200 !default;
+$esds-color-orange-93: #EEAC8D !default;
+$esds-color-neutral-5: #0D0D0D !default;
+$esds-color-neutral-15: #262626 !default;
+$esds-color-neutral-25: #404040 !default;
+$esds-color-neutral-42: #6B6B6B !default;
+$esds-color-neutral-53: #888888 !default;
+$esds-color-neutral-70: #B3B1B1 !default;
+$esds-color-neutral-80: #CCCACA !default;
+$esds-color-neutral-90: #E6E3E3 !default;
+$esds-color-neutral-95: #F3F1F1 !default;
+
+$esds-text-color-brand: #E85200 !default;
+$esds-text-color-primary-on-white: #0D0D0D !default;
+$esds-text-color-primary-on-dark: #FFFFFF !default;
+$esds-text-color-secondary-on-white: #888888 !default;
+$esds-text-color-secondary-on-dark: #888888 !default;
+
+$esds-namespace: "esds" !default;
+$esds-tokens: (
+    'color': (
+        'white': $esds-color-white,
+        'black': $esds-color-black,
+        'orange': (
+            '82': $esds-color-orange-82,
+            '91': $esds-color-orange-91,
+            '93': $esds-color-orange-93
+        ),
+        'neutral': (
+            '5': $esds-color-neutral-5,
+            '15': $esds-color-neutral-15,
+            '25': $esds-color-neutral-25,
+            '42': $esds-color-neutral-42,
+            '53': $esds-color-neutral-53,
+            '70': $esds-color-neutral-70,
+            '80': $esds-color-neutral-80,
+            '90': $esds-color-neutral-90,
+            '95': $esds-color-neutral-95
+        )
+    ),
+    'text-color': (
+        'brand': $esds-text-color-brand,
+        'primary': (
+            'on-white': $esds-text-color-primary-on-white,
+            'on-dark': $esds-text-color-primary-on-dark
+        ),
+        'secondary': (
+            'on-white': $esds-text-color-secondary-on-white,
+            'on-dark': $esds-text-color-secondary-on-dark
+        )
+    ),
+    'namespace': $esds-namespace
+);
+
+@function esds-token($keys...) {
+    $map: $esds-tokens;
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
