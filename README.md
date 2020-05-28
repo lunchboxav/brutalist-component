@@ -1,99 +1,16 @@
-# Brutalist Component
+# Tense aka Brutalist Component 
 
-Lumbung ini berisi contoh komponen yang mengimplementasikan gaya desain Brutalist. Kode diimplementasikan dengan Svelte. Teks di bawah ini adalah template README.md bawaan Svelte, diletakkan di sini untuk referensi.
+Tense is a Design System that implements brutalism design style in form of reusable components written in Svelte. It aims to provide its users sets of brash, bold and beutiful component that gives extra characteristic edge and sense of expresiveness to a digital product (website, web app, etc). This is still very early in development. 
 
----
+## Design Tokens
 
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+For the time being, a design token yaml file is available and will be updated extensively everytime a design principle is established. This file consists of tokens (aka, key-value pairs) of established variables that build the whole design system. The flow of using this token file is as follows:
 
----
+1. The yaml file (`token.yaml`) is processed using [Eightshapes' build system](https://github.com/EightShapes/esds-generators/tree/master/packages/esds-token-compiler) to generate SCSS variables in `vars.scss` file. 
+2. This SCSS variable file will then be referred inside the main stylesheet, `styles.scss` where majority of CSS classes will be defined. 
+3. Finally, each component should be able to refer to the required class(es) from the main stylesheed.
 
-# svelte app
+So, in short: 
+`token.yaml` :point_right: `vars.scss` :point_right: `styles.scss` :point_right: `Component.svelte`
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
-npm install
-```
-
-...then start [Rollup](https://rollupjs.org):
-
-```bash
-npm run dev
-```
-
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
-
-
-## Building and running in production mode
-
-To create an optimised version of the app:
-
-```bash
-npm run build
-```
-
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
-
-
-## Single-page app mode
-
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
-
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
-
-```js
-"start": "sirv public --single"
-```
-
-
-## Deploying to the web
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-now deploy --name my-project
-```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
+With this in place, any significant fundamental change to the design should be expressed inside the token and the change will propagated throughout Component's build.
