@@ -23,7 +23,10 @@ The list below displays various font types utilized by Tense.
 <Text fontSize={"md"}>Life is good, body font, 1 rem</Text>
 <Text fontSize={"sm"}>Life is good, body font, 0.875 rem</Text>
 <Text fontSize={"xs"}>Life is good, body font, 0.75 rem</Text> -->
-
+<Heading class="heading5xl">Life is good, heading font, 3 rem</Heading>
+<Heading class="heading4xl">Life is good, heading font, 2.25 rem</Heading>
+<Heading class="heading3xl">Life is good, heading font, 1.875 rem</Heading>
+<Heading class="heading2xl">Life is good, heading font, 1.5 rem</Heading>
 <Text class="bodyXl">This is just a test, body font, 1.25 rem</Text>
 <Text class="bodyL">This is just a test, body font, 1.125 rem</Text>
 <Text class="bodyM">This is just a test, body font, 1 rem</Text>

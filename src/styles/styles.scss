@@ -1,6 +1,30 @@
 @import './vars.scss';
 @import './test.scss';
 
+@mixin heading5xl() {
+  font-size: $xxxxxlarge-medium-font-size;
+  font-weight: $xxxxxlarge-medium-font-weight;
+  line-height: $xxxxxlarge-medium-line-height;
+}
+
+@mixin heading4xl() {
+  font-size: $xxxxlarge-medium-font-size;
+  font-weight: $xxxxlarge-medium-font-weight;
+  line-height: $xxxxlarge-medium-line-height;
+}
+
+@mixin heading3xl() {
+  font-size: $xxxlarge-medium-font-size;
+  font-weight: $xxxlarge-medium-font-weight;
+  line-height: $xxxlarge-medium-line-height;
+}
+
+@mixin heading2xl() {
+  font-size: $xxlarge-medium-font-size;
+  font-weight: $xxlarge-medium-font-weight;
+  line-height: $xxlarge-medium-line-height;
+}
+
 @mixin bodyXl() {
   font-size: $xlarge-medium-font-size;
   font-weight: $xlarge-medium-font-weight;

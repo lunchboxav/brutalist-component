@@ -1,23 +1,28 @@
 <script>
-  export let fontSize;
-  let fontSizes = {
-    xs: "0.75rem",
-    sm: "0.875rem",
-    md: "1rem",
-    lg: "1.125rem",
-    xl: "1.25rem",
-    "2xl": "1.5rem",
-    "3xl": "1.875rem",
-    "4xl": "2.25rem",
-    "5xl": "3rem",
-    "6xl": "4rem",
-  }
+  let className = "";
+  export { className as class };
 </script>
 
-<style>
+<style type="text/scss">
+  @import "../styles/styles";
 
+  .heading5xl {
+    @include heading5xl();
+  }
+
+  .heading4xl {
+    @include heading4xl();
+  }
+
+  .heading3xl {
+    @include heading3xl();
+  }
+
+  .heading2xl {
+    @include heading2xl();
+  }
 </style>
 
-<h2 style="font-size: {fontSizes[fontSize]}">
-  <slot></slot>
+<h2 class={className}>
+  <slot />
 </h2>
